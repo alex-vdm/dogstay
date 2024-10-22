@@ -534,7 +534,7 @@ h4 {
     }
 
     .contact-container-right {
-        width: 80vw;
+        width: var(--width);
 
         margin-left: 0;
         justify-content: space-between;
@@ -571,7 +571,7 @@ h4 {
     }
 
     .navbar {
-        font-size: 23px;
+        font-size: 21px;
     }
 
     .navbar a img {
@@ -590,7 +590,7 @@ h4 {
     }
 
     .navbar {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .navbar a:hover img,
