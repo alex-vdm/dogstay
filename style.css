@@ -541,7 +541,7 @@ h4 {
     }
 
     .contact-item {
-        width: 80vw;
+        width: var(--width);
         flex-direction: row;
         justify-content: space-between;
     }
