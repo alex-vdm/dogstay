@@ -1,0 +1,633 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                               Import                                                 */
+/* ---------------------------------------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./src/fonts/Aristotelica.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aquatico';
+    src: url('./src/fonts/Aquatico.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --width: 960px;
+
+    --margin: 50px;
+
+    --bg-color: #FFFCE7;
+    --txt-color-beige: #B18F62;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                Body                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--bg-color);
+
+    font-family: "Aristotelica";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: var(--width);
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                               Patches                                                */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.patch {
+    position: absolute;
+}
+
+.patch img {
+    width: 100%;
+}
+
+.patch-S {
+    width: 60px;
+}
+
+.patch-M {
+    width: 80px;
+}
+
+.patch-L {
+    width: 100px;
+}
+
+#patch-1 {
+    top: 5vh;
+    right: 5vw;
+
+    transform: rotate(30deg);
+}
+
+#patch-2 {
+    top: 20vh;
+    left: 10vw;
+}
+
+#patch-3 {
+    top: 700px;
+    right: 25vw;
+
+    transform: rotate(120deg)
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                Logo                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.logo {
+    width: 450px;
+
+    margin-top: var(--margin);
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                               Navbar                                                 */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.navbar {
+    width: 100%;
+    height: 100px;
+
+    margin-top: var(--margin);
+
+    border-bottom: 1px solid black;
+
+    font-family: "Aristotelica";
+    font-size: 28px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.navbar a img {
+    width: 25px;
+    transform: translateY(-2px);
+
+    position: absolute;
+    left: -30px;
+
+    display: none;
+}
+
+.navbar a:hover img,
+.navbar-active img {
+    display: flex !important;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                               Pages                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+#page_1 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_2 {
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_3 {
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_4 {
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                Items                                                 */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.title {
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+.title span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 11px;
+}
+
+h1 {
+    font-family: "Aquatico";
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.subtitle {
+    width: 100%;
+
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+h2 {
+    font-family: "Aristotelica";
+    text-align: left;
+
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: "Aristotelica";
+    text-align: left;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+.list {
+    width: 100%;
+
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                              Gallerie                                                */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.gallery-container {
+    margin-top: var(--margin);
+}
+
+.gallery-container h1 {
+    margin-bottom: var(--margin);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+
+    gap: 20px;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                              Contact                                                 */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.contact-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.contact-item {
+    width: 100%;
+
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item-txt {
+    margin-top: 20px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.contact-item h2 {
+    text-decoration: underline;
+
+    font-weight: 700;
+
+    cursor: default;
+}
+
+.contact-container-left iframe {
+    width: 500px;
+    height: 400px;
+
+    margin-top: 35px;
+}
+
+.contact-container-right {
+    margin-left: 50px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                imgs                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.home-img {
+    width: 844px;
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                footer                                                */
+/* ---------------------------------------------------------------------------------------------------- */
+
+footer {
+    width: 100%;
+    height: 200px;
+
+    margin-top: var(--margin);
+
+    background-color: #ffcd8b;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    width: var(--width);
+
+    height: 150px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+.footer-item p,
+.footer-item a {
+    font-size: 20px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                 txt                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.txt-beige {
+    color: var(--txt-color-beige);
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*                                                Media                                                 */
+/* ---------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 980px) {
+    :root {
+        --width: 90vw;
+    }
+
+    .patch {
+        display: none;
+    }
+
+    .patch-imgs {
+        display: flex;
+    }
+
+    .logo {
+        width: 400px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2, h3, .contact-item-txt {
+        font-size: 24px;
+    }
+
+    .home-img {
+        width: 100%;
+    }
+
+    .contact-container-left iframe {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .logo {
+        width: 350px;
+    }
+
+    .footer-item-secondary {
+        display: none;
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img:hover {
+        transform: none;
+    }
+
+    .contact-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .contact-container-right {
+        width: 80vw;
+
+        margin-left: 0;
+        justify-content: space-between;
+    }
+
+    .contact-item {
+        width: 80vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-item-txt {
+        margin-top: 0;
+        text-align: right;
+    }
+
+    .contact-container-left iframe {
+        width: var(--width);
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .logo {
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2, h3, .contact-item-txt {
+        font-size: 20px;
+    }
+
+    .navbar {
+        font-size: 23px;
+    }
+
+    .navbar a img {
+        width: 22px;
+        transform: translateX(3px) translateY(-3px);
+    }
+}
+
+@media screen and (max-width: 605px) {
+    :root {
+        --margin: 40px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    .navbar {
+        font-size: 23px;
+    }
+
+    .navbar a:hover img,
+    .navbar-active img {
+        display: none !important;
+    }
+
+    .navbar-active {
+        border-bottom: 1px solid black;
+        padding-bottom: 4px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --margin: 30px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2, h3, .contact-item-txt {
+        font-size: 18px;
+    }
+
+    .navbar {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    h2, h3, .contact-item-txt {
+        font-size: 16px;
+    }
+}
