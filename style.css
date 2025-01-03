@@ -460,6 +460,36 @@ h4 {
 
 
 /* ---------------------------------------------------------------------------------------------------- */
+/*                                             imprint                                                  */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.imprint {
+    width: var(--width);
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.imprint * {
+    text-align: left;
+    list-style: none;
+}
+
+.imprint h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.imprint-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
 /*                                                 txt                                                  */
 /* ---------------------------------------------------------------------------------------------------- */
 
@@ -503,6 +533,10 @@ h4 {
 
     .contact-container-left iframe {
         width: 400px;
+    }
+
+    .imprint-head {
+        font-size: 28px;
     }
 }
 
@@ -578,6 +612,10 @@ h4 {
         width: 22px;
         transform: translateX(3px) translateY(-3px);
     }
+
+    .imprint-head {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 605px) {
@@ -602,6 +640,10 @@ h4 {
         border-bottom: 1px solid black;
         padding-bottom: 4px;
     }
+
+    .imprint-head {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -620,6 +662,10 @@ h4 {
     .navbar {
         font-size: 18px;
     }
+
+    .imprint-head {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -629,5 +675,9 @@ h4 {
 
     h2, h3, .contact-item-txt {
         font-size: 16px;
+    }
+
+    .imprint-head {
+        font-size: 28px;
     }
 }
